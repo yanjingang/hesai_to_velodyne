@@ -1,0 +1,10 @@
+<launch>
+    <!-- <param name="rosout_filename" value="/home/lifeipeng/testdata/log.log"/> -->
+    <!-- <param name="rosout_screen" value="false"/> -->
+    <param name="lidar_topic" value="/hesai/pandar"/>
+    <param name="publish_lidar_topic" value="/velodyne_points"/>
+
+    <node pkg="hesai_to_velodyne" type="hesai_to_velodyne" name="pandar40p_to_velodyne" args="XYZIRT XYZIRT"/>
+
+    <node pkg="rviz" type="rviz" name="rviz_pandar40p_to_velodyne" required="true" args="-d $(find hesai_to_velodyne)/rviz/rviz.rviz"/>
+</launch>
