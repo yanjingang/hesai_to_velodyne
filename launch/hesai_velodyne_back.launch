@@ -1,8 +1,0 @@
-<launch>
-    <!-- <param name="rosout_filename" value="/home/lifeipeng/testdata/log.log"/> -->
-    <!-- <param name="rosout_screen" value="false"/> -->
-    <param name="lidar_topic" value="/hesai_2/pandar"/>
-    <param name="publish_lidar_topic" value="/velodyne_back_points"/>
-
-    <node pkg="hesai_to_velodyne" type="hesai_to_velodyne" name="hesai_to_velodyne_node_1" args="XYZIRT XYZIRT"/>
-</launch>
