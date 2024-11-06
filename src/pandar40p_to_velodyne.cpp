@@ -60,7 +60,7 @@ void hesaiHandler(const sensor_msgs::PointCloud2 &currentMsg) {
     pcl::PointCloud<HesaiPointXYZIRT>::Ptr hesaiCloud(new pcl::PointCloud<HesaiPointXYZIRT>());
     pcl::fromROSMsg(currentMsg, *hesaiCloud);
     pcl::PointCloud<VelodynePointXYZIRT>::Ptr velodyneCloud(new pcl::PointCloud<VelodynePointXYZIRT>());
-    velodyneCloud->is_dense = currentCloudMs->is_dense;
+    velodyneCloud->is_dense = currentMsg->is_dense;
 
     // Convert to Velodyne format
     double time_begin = hesaiCloud->points[0].timestamp;
