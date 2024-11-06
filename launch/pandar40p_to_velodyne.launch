@@ -6,8 +6,6 @@
     <param name="pub_packets_topic" value="/velodyne_packets"/>
 
     <node pkg="hesai_to_velodyne" type="pandar40p_to_velodyne" name="pandar40p_to_velodyne" args="XYZIRT XYZIRT"/>
-    <!--node pkg="nodelet" type="nodelet" name="cloud_nodelet" output="screen" args="load velodyne_laserscan/LaserScanNodelet velodyne_nodelet_manager"/-->
-    <node pkg="nodelet" type="nodelet" name="cloud_nodelet" output="screen" args="load velodyne_pointcloud/CloudNodelet velodyne_nodelet_manager">
-
+    
     <node pkg="rviz" type="rviz" name="rviz_pandar40p_to_velodyne" required="true" args="-d $(find hesai_to_velodyne)/rviz/rviz.rviz"/>
 </launch>

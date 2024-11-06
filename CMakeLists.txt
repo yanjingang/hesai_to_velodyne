@@ -30,6 +30,6 @@ link_directories(
 )
 
 
-add_executable(hesai_to_velodyne src/*.cpp)
-add_dependencies(hesai_to_velodyne ${catkin_EXPORTED_TARGETS})
-target_link_libraries(hesai_to_velodyne ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARIES})
+add_executable(pandar40p_to_velodyne src/pandar40p_to_velodyne.cpp)
+add_dependencies(pandar40p_to_velodyne ${catkin_EXPORTED_TARGETS})
+target_link_libraries(pandar40p_to_velodyne ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARIES})
